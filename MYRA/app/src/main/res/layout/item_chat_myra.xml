@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="horizontal" android:padding="4dp">
+    <View android:layout_width="8dp" android:layout_height="8dp"
+        android:background="#FF1744" android:layout_margin="6dp"/>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="vertical" android:background="@drawable/bg_chat_myra"
+        android:padding="10dp" android:maxWidth="260dp">
+        <TextView android:id="@+id/chatText" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textColor="@color/myra_text" android:textSize="13sp"/>
+        <TextView android:id="@+id/chatTime" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textColor="@color/myra_hint"
+            android:textSize="9sp"/>
+    </LinearLayout>
+</LinearLayout>

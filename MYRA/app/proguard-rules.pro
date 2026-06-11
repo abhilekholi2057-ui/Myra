@@ -1,0 +1,6 @@
+-keep class okhttp3.** { *; }
+-keep class okio.** { *; }
+-keep class org.json.** { *; }
+-keep class kotlinx.coroutines.** { *; }
+-keepattributes Signature
+-keepattributes *Annotation*

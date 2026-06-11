@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/myra_dark">
+
+    <!-- Top Status Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="40dp"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+            <TextView android:id="@+id/batteryText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="100%" android:textColor="@color/myra_red" android:fontFamily="monospace" android:textSize="12sp"/>
+            <TextView android:id="@+id/ramText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="RAM" android:textColor="@color/myra_hint" android:fontFamily="monospace" android:textSize="10sp"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="MYRA" android:textColor="@color/myra_red" android:textSize="22sp"
+                android:textStyle="bold" android:letterSpacing="0.3"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="AI COMPANION" android:textColor="@color/myra_hint"
+                android:fontFamily="monospace" android:textSize="9sp" android:letterSpacing="0.2"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="end">
+            <TextView android:id="@+id/timeText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="00:00" android:textColor="@color/myra_red" android:fontFamily="monospace" android:textSize="12sp"/>
+            <ImageButton android:id="@+id/settingsBtn" android:layout_width="32dp" android:layout_height="32dp"
+                android:src="@drawable/ic_settings" android:background="?attr/selectableItemBackgroundBorderless"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Red overlay effect -->
+    <View android:id="@+id/redOverlay" android:layout_width="match_parent" android:layout_height="match_parent"
+        android:background="#FF1744" android:alpha="0"/>
+
+    <!-- Center Orb Area -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:gravity="center" android:layout_marginBottom="240dp">
+
+        <com.myra.assistant.ui.main.OrbAnimationView
+            android:id="@+id/orbView" android:layout_width="260dp" android:layout_height="260dp"/>
+
+        <com.myra.assistant.ui.main.WaveformView
+            android:id="@+id/waveformView" android:layout_width="200dp" android:layout_height="40dp"
+            android:layout_marginTop="12dp"/>
+
+        <TextView android:id="@+id/statusText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Tap karke bolo 💬" android:textColor="@color/myra_hint"
+            android:textSize="13sp" android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <!-- Bottom Chat + Mic -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:layout_gravity="bottom" android:padding="16dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chatRecycler" android:layout_width="match_parent"
+            android:layout_height="200dp" android:clipToPadding="false"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center" android:orientation="vertical" android:layout_marginTop="8dp">
+            <ImageButton android:id="@+id/micButton" android:layout_width="72dp" android:layout_height="72dp"
+                android:src="@drawable/ic_mic_on" android:background="@drawable/bg_mic_button"
+                android:contentDescription="Mic"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Long press to stop" android:textColor="@color/myra_hint"
+                android:textSize="10sp" android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

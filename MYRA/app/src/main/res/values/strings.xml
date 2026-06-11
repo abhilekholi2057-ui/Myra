@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MYRA</string>
+    <string name="accessibility_description">MYRA needs Accessibility Service to open/close apps and perform actions on your behalf.</string>
+    <string name="default_api_key">AIzaSyAb8RN6L6kaiS0YjS1NPzyPyyS5-XpffmfVGsS5kMt9OsXD_1QQ</string>
+</resources>
